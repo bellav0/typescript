@@ -9,19 +9,18 @@ export class HomePage {
 
   constructor() {}
   comentario : Object  = {
-          alertaSpoiler : false,
+          alertaSpoiler:true,
 	        texto : 'Ótimo filme' ,
 	        horario : '12: 03 ' ,
-          episódio : 5 ,
+          episódio : 5,
           likes : {
-		          nLikes : '7' ,
+		          nLikes : 7,
 		          estadoDoLike : true ,
-	       }
-
-
-
+         }
 
   }
+
+  posts: string[] = ["Melhor série da vida", "Amei", "Odiei o final","Alguém cancela o Ivar pfv"]
 
 
   likeOrUnlike(comentário)   {
@@ -34,12 +33,7 @@ export class HomePage {
 	       this.comentario.likes.estadoDoLike = false ;
 	  }
   }
-  spoiler(comentario) {
-    if(this.comentario.alertaSpoiler ==true){
-        return "Este comentário contém spoiler"
-    }
-    else {
-      return comentario.texto
-    }
-  }
+
+
+  
 }

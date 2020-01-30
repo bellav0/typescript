@@ -13,17 +13,23 @@
   <ion-card class="welcome-card">
     <img src="/assets/shapes.svg" alt=""/>
     <ion-card-header>
-      <ion-card-subtitle>Get Started</ion-card-subtitle>
+      <ion-card-subtitle></ion-card-subtitle>
       <ion-card-title>Bem-Vindo</ion-card-title>
-      <ion-icon size="large" name="thumbs-up" (click)="likeOrUnlike(comentario)"
-      color="{{comentario.likes.estadoDoLike ?  'primary': 'light'}}"></ion-icon>
+      <ion-item>
+        <p *ngIf="comentario.alertaSpoiler==false">
+          {{comentario.texto}}
+        </p>
+        <ion-icon size="medium" name="thumbs-up" (click)="likeOrUnlike(comentario)"
+        color="{{comentario.likes.estadoDoLike ?  'primary': 'light'}}"></ion-icon>
         {{comentario.likes.nlikes}}
-      <ion- *ngIf="!comentario.alertaSpoiler" size="large" name="checkmark"></ion-icon>{{comentario.alertaSpoiler}}
-    </ion-card-header>
+        <ion-chip *ngIf="comentario.alertaSpoiler==true">
+          <ion-label>Este comentário foi ocultado pois contém spoiler</ion-label>
+        </ion-chip>
+      </ion-item>
+   </ion-card-header>
+
     <ion-card-content>
-      <p>
-        {{comentario.texto}}
-      </p>
+      
     </ion-card-content>
   </ion-card>
 
