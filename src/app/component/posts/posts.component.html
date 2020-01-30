@@ -1,0 +1,37 @@
+<!-- <ion-card class="welcome-card">
+  <img src="/assets/shapes.svg" alt=""/>
+  <ion-card-header>
+    <ion-card-subtitle></ion-card-subtitle>
+    <ion-card-title>Bem-Vindo</ion-card-title>
+    <ion-item>
+
+      <p *ngIf="comentario.alertaSpoiler==false">
+        {{comentario.texto}}
+      </p>
+
+      <ion-icon size="medium" name="thumbs-up" (click)="likeOrUnlike(comentario)"
+      color="{{comentario.likes.estadoDoLike ?  'primary': 'light'}}"></ion-icon>
+      {{comentario.likes.nlikes}}
+
+      <ion-chip *ngIf="comentario.alertaSpoiler==true">
+        <ion-label>Este comentário foi ocultado pois contém spoiler!</ion-label>
+      </ion-chip>
+
+    </ion-item>
+ </ion-card-header>
+</ion-card> -->
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <img src="/assets/shapes.svg" alt=""/>
+    <ion-card-header>
+      <ion-card-subtitle>Isabella Vitoria</ion-card-subtitle>
+      <ion-card-title>Bem-Vindo</ion-card-title>
+        <ion-icon size="medium" name="thumbs-up" ></ion-icon>
+        <p>
+          Qualquer coisa!
+        </p>
+    </ion-card-header>
+  </ion-card>
+</ion-content>   
+

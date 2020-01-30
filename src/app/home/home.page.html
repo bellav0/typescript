@@ -11,27 +11,20 @@
 
 <ion-content>
   <ion-card class="welcome-card">
-    <img src="/assets/shapes.svg" alt=""/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUcCdaYvLXsHIKTVpSR6BhuDwq1-m2lVMY5TfaDm6jD57uXQtb" alt=""/>
     <ion-card-header>
-      <ion-card-subtitle></ion-card-subtitle>
-      <ion-card-title>Bem-Vindo</ion-card-title>
+      <ion-card-subtitle>Ação,Suspense</ion-card-subtitle>
       <ion-item>
-        <p *ngIf="comentario.alertaSpoiler==false">
-          {{comentario.texto}}
-        </p>
-        <ion-icon size="medium" name="thumbs-up" (click)="likeOrUnlike(comentario)"
-        color="{{comentario.likes.estadoDoLike ?  'primary': 'light'}}"></ion-icon>
-        {{comentario.likes.nlikes}}
-        <ion-chip *ngIf="comentario.alertaSpoiler==true">
-          <ion-label>Este comentário foi ocultado pois contém spoiler</ion-label>
-        </ion-chip>
+      <ion-card-title>Vikings</ion-card-title>
+      <ion-chip>
+        <ion-icon name='star' ></ion-icon>
+        <ion-label>4.5</ion-label>
+      </ion-chip>
       </ion-item>
-   </ion-card-header>
-
-    <ion-card-content>
-      
-    </ion-card-content>
+    </ion-card-header>
   </ion-card>
+     
+
 
   <ion-list lines="none">
     <ion-list-header>
@@ -55,3 +48,4 @@
     </ion-item>
   </ion-list>
 </ion-content>
+

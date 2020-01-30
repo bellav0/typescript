@@ -20,8 +20,15 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
+    },
+    {  
+      title : 'Post',
+      url : '/post',
+      icon : 'star'
     }
   ];
+    
+
 
   constructor(
     private platform: Platform,

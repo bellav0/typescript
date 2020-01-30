@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor() {}
-  comentario : Object  = {
+comentario;
+  constructor() {
+    this.comentario  = {
           alertaSpoiler:true,
 	        texto : 'Ótimo filme' ,
 	        horario : '12: 03 ' ,
@@ -17,13 +17,13 @@ export class HomePage {
 		          nLikes : 7,
 		          estadoDoLike : true ,
          }
+  }
+  
 
   }
 
-  posts: string[] = ["Melhor série da vida", "Amei", "Odiei o final","Alguém cancela o Ivar pfv"]
 
-
-  likeOrUnlike(comentário)   {
+  likeOrUnlike(comentario:any)   {
 	   if (this.comentario.likes.estadoDoLike  ==  false ) {
        this.comentario.likes.nLikes ++ ;
 		   this.comentario.likes.estadoDoLike = true ;
