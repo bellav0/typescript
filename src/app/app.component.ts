@@ -25,6 +25,11 @@ export class AppComponent {
       title : 'Post',
       url : '/post',
       icon : 'star'
+    },
+    {
+      title: 'Cadastro',
+      url:'/cadastro',
+      icon :'star'
     }
   ];
     

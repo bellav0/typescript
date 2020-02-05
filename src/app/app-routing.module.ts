@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AlthGuard } from './guards/alth/alth.guard';
 
 const routes: Routes = [
   {
@@ -14,9 +15,14 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  },  {
+  },
+  {
     path: 'post',
-    loadChildren: () => import('./post/post.module').then( m => m.PostPageModule)
+    loadChildren: () => import('./post/post.module').then( m => m.PostPageModule), canActivate:[AlthGuard]
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule) 
   }
 
 ];
